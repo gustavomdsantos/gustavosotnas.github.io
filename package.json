@@ -1,32 +1,45 @@
 {
   "name": "gustavosotnas.github.io",
-  "version": "0.1.0",
   "description": "Site de apresentação de meu portfólio de projetos de software.",
-  "main": "assets/js/app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "version": "0.1.0",
+  "homepage": "https://github.com/gustavosotnas/gustavosotnas.github.io",
+  "author": {
+    "name": "Gustavo Moraes (https://gustavosotnas.github.io)",
+    "email": "gustavosotnas1@gmail.com",
+    "url": "https://gustavosotnas.github.io"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/gustavosotnas/gustavosotnas.github.io.git"
   },
-  "keywords": [
-    "personal-website",
-    "personal-site",
-    "personal",
-    "website",
-    "web",
-    "portfolio",
-    "portfolio-website",
-    "portfolio-site",
-    "software",
-    "software-engineering",
-    "software-developer"
-  ],
-  "author": "Gustavo Moraes (https://gustavosotnas.github.io)",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/gustavosotnas/gustavosotnas.github.io/issues"
   },
-  "homepage": "https://github.com/gustavosotnas/gustavosotnas.github.io"
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/gustavosotnas/gustavosotnas.github.io/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "assets/js/app.js",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "coffee-script": "~1.7.0",
+    "grunt": "~0.4.2",
+    "grunt-codo": "~0.1.0",
+    "grunt-coffeelint": "0.0.8",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-coffee": "~0.10.0",
+    "grunt-contrib-uglify": "~0.3.1",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-mocha-cli": "~1.5.0",
+    "load-grunt-tasks": "~0.3.0",
+    "should": "~3.1.0"
+  },
+  "keywords": []
 }
