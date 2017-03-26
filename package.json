@@ -1,0 +1,32 @@
+{
+  "name": "gustavosotnas.github.io",
+  "version": "0.1.0",
+  "description": "Site de apresentação de meu portfólio de projetos de software.",
+  "main": "assets/js/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gustavosotnas/gustavosotnas.github.io.git"
+  },
+  "keywords": [
+    "personal-website",
+    "personal-site",
+    "personal",
+    "website",
+    "web",
+    "portfolio",
+    "portfolio-website",
+    "portfolio-site",
+    "software",
+    "software-engineering",
+    "software-developer"
+  ],
+  "author": "Gustavo Moraes (https://gustavosotnas.github.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gustavosotnas/gustavosotnas.github.io/issues"
+  },
+  "homepage": "https://github.com/gustavosotnas/gustavosotnas.github.io"
+}
