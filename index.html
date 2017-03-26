@@ -16,6 +16,8 @@
   </head>
   <body>
 
+    <h1 id="helloworld">Hello World</h1>
+
     <!-- jQuery, Underscore, Backbone, and Require JS libs: -->
     <script src="assets/js/lib/jquery-3.2.0.min.js"></script>
     <script src="assets/js/lib/underscore-min.js"></script>
@@ -23,6 +25,10 @@
     <script src="assets/js/lib/require.js"></script>
 
     <!-- Your JS files -->
-
+    <script type="text/javascript">
+      $(function() {
+        $('#helloworld').html('Hello World <em>com jQuery</em>');
+      })
+    </script>
   </body>
 </html>
