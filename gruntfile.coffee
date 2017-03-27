@@ -17,14 +17,14 @@ module.exports = (grunt) ->
   grunt.initConfig
     watch:
       coffee:
-        files: 'src/*.coffee'
+        files: 'src/coffee/*.coffee'
         tasks: ['coffee:compile']
 
     coffee:
       compile:
         expand: true,
         flatten: true,
-        cwd: "#{__dirname}/src/",
+        cwd: "#{__dirname}/src/coffee",
         src: ['*.coffee'],
-        dest: 'js/',
+        dest: 'assets/js/',
         ext: '.js'
