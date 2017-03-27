@@ -26,5 +26,5 @@ module.exports = (grunt) ->
         flatten: true,
         cwd: "#{__dirname}/src/coffee",
         src: ['*.coffee'],
-        dest: 'assets/js/',
+        dest: 'assets/js/build',
         ext: '.js'
