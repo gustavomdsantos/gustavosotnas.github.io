@@ -1,6 +1,3 @@
-# Project-specific excludes
-*.js
-
 # Platform-specific excludes
 thumbs.db
 .DS_Store
