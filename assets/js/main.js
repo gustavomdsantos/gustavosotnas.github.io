@@ -1,5 +1,5 @@
 (function() {
-  define(["jquery", "underscore", "backbone", "views/app"], function($, _, Backbone) {
+  define(["views/app"], function() {
     var Main;
     Main = (function() {
       function Main() {

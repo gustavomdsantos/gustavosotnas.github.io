@@ -1,9 +1,6 @@
 define [
-	"jquery"
-	"underscore"
-	"backbone"
     "views/app" # executa app
-], ($, _, Backbone) ->
+], () ->
 
     class Main
         constructor: () ->
