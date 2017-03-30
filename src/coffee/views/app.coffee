@@ -4,4 +4,13 @@ define [
 	"backbone"
 ], ($, _, Backbone) ->
 
-	$('#helloworld').html('Hello World <em>com jQuery</em>');
+class App extends Backbone.View
+
+	tagName: 'h1'
+	id: 'helloworld'
+
+	initialize: () ->
+		console.log "Executando app"
+		@render
+	render: () ->
+		@$el.html 'Hello World <em>com jQuery</em>'
