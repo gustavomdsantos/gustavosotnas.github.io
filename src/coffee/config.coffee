@@ -15,7 +15,12 @@ requirejs.config
         underscore: 'lib/underscore-min'
         backbone: 'lib/backbone-min'
     shim:
+        jquery:
+            exports: "$"
+        underscore:
+            exports: "_"
         backbone:
             deps: ["jquery", "underscore"]
+            exports: "Backbone"
 
 require(["main"]) # Carrega script principal
