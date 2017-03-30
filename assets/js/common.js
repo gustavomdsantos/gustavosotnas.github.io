@@ -15,7 +15,6 @@ requirejs.config({
 		],
 		underscore: 'lib/underscore-min',
 		backbone: 'lib/backbone-min',
-		app: 'views/app'
 	}
 });
-require(["app"]); // Carrega script principal
+require(["main"]); // Carrega script principal
