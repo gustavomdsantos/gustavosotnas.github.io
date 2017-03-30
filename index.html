@@ -18,14 +18,10 @@
 
     <h1 id="helloworld">Hello World</h1>
 
-    <!-- Require JS (loads all libs): -->
-    <script data-main="assets/js/common" src="assets/js/lib/require.js"></script>
+    <!-- Require JS: -->
+    <script src="assets/js/lib/require.js"></script>
 
-    <!-- Your JS files -->
-    <script>
-      require(['common'], function(){
-        require(['app']);
-      });
-    </script>
+    <!-- Your configuration file (loads all libs) -->
+    <script>require(['assets/js/common.js']);</script>
   </body>
 </html>

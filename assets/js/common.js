@@ -18,3 +18,4 @@ requirejs.config({
 		app: 'views/app'
 	}
 });
+require(["app"]); // Carrega script principal
