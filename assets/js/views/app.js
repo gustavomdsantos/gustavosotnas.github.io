@@ -1,5 +1,5 @@
 (function() {
-  define(["jquery", "underscore", "backbone"], function($, _, Backbone) {
+  define(["jquery", "underscore", "backbone"], function() {
     return $('#helloworld').html('Hello World <em>com jQuery</em>');
   });
 
