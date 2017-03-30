@@ -15,6 +15,6 @@ requirejs.config({
 		],
 		underscore: 'lib/underscore-min',
 		backbone: 'lib/backbone-min',
-		app: 'build/app'
+		app: 'views/app'
 	}
 });
