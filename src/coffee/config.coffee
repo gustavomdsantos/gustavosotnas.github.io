@@ -16,11 +16,11 @@ requirejs.config
         backbone: 'lib/backbone-min'
     shim:
         jquery:
-            exports: "$"
+            exports: "$" # explicita nome da lib que deve ser usado no código (opcional)
         underscore:
-            exports: "_"
+            exports: "_" # explicita nome da lib que deve ser usado no código (opcional)
         backbone:
             deps: ["jquery", "underscore"]
-            exports: "Backbone"
+            exports: "Backbone" # explicita nome da lib que deve ser usado no código (opcional)
 
 require(["main"]) # Carrega script principal
