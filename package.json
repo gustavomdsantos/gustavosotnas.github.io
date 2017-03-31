@@ -21,11 +21,12 @@
       "url": "https://github.com/gustavosotnas/gustavosotnas.github.io/blob/master/LICENSE-MIT"
     }
   ],
-  "main": "assets/js/app.js",
+  "main": "assets/js/config.js",
   "engines": {
     "node": ">= 0.10.0"
   },
   "scripts": {
+    "start": "node web.js",
     "test": "grunt test"
   },
   "devDependencies": {
