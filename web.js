@@ -1,5 +1,5 @@
 var static = require('node-static');
-var file = new static.Server('./assets', {
+var file = new static.Server('./', {
     cache: 0,
     gzip: true,
     headers: {
