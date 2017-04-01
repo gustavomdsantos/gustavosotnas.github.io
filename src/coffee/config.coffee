@@ -12,8 +12,14 @@ requirejs.config
             # Se o download da biblioteca pelo CDN falhar, carrega localmente
             'lib/jquery.min'
         ]
-        underscore: 'lib/underscore-min'
-        backbone: 'lib/backbone-min'
+        underscore: [
+            'http://underscorejs.org/underscore-min',
+            'lib/underscore-min'
+        ]
+        backbone: [
+            'http://backbonejs.org/backbone-min',
+            'lib/backbone-min'
+        ]
     shim:
         jquery:
             exports: "$" # explicita nome da lib que deve ser usado no código (opcional)
