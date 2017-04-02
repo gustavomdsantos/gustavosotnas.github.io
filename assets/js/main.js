@@ -1,15 +1,22 @@
+
+/*
+define [
+    "views/app" # executa app
+], () ->
+ */
+
 (function() {
-  define(["views/app"], function() {
-    var Main;
-    Main = (function() {
-      function Main() {
-        console.log("====================================\n gustavosotnas.github.io is running!\n ===================================");
-      }
+  var Main;
 
-      return Main;
+  Main = (function() {
+    function Main() {
+      console.log("====================================\n gustavosotnas.github.io is running!\n ===================================");
+    }
 
-    })();
-    return new Main();
-  });
+    return Main;
+
+  })();
+
+  return new Main();
 
 }).call(this);

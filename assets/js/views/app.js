@@ -1,9 +1,16 @@
+
+/*
+define [
+	"jquery"
+	"underscore"
+	"backbone"
+], ($, _, Backbone) ->
+ */
+
 (function() {
   var App,
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
     hasProp = {}.hasOwnProperty;
-
-  define(["jquery", "underscore", "backbone"], function($, _, Backbone) {});
 
   App = (function(superClass) {
     extend(App, superClass);
@@ -18,6 +25,7 @@
 
     App.prototype.initialize = function() {
       console.log("Executando app");
+      this.$el.html('Hello World <em>com jQuery</em>');
       return this.render;
     };
 
@@ -28,5 +36,7 @@
     return App;
 
   })(Backbone.View);
+
+  return new App();
 
 }).call(this);
