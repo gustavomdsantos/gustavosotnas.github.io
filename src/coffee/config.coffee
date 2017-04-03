@@ -16,10 +16,7 @@ requirejs.config
             'http://underscorejs.org/underscore-min',
             'lib/underscore-min'
         ]
-        backbone: [
-            'http://backbonejs.org/backbone-min',
-            'lib/backbone-min'
-        ]
+        backbone: window.location.href + "assets/js/" + 'lib/backbone-min'
     shim:
         jquery:
             exports: "$" # explicita nome da lib que deve ser usado no código (opcional)
