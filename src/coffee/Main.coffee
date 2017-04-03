@@ -1,11 +1,11 @@
 define [
-    "views/app" # executa app
-], (App) ->
+    "views/AppView" # executa AppView
+], (AppView) ->
 
     class Main
         constructor: () ->
-            app = new App
-            $('body').html app.render().el
+            appView = new AppView
+            $('body').html appView.render().el
 	        console.log("====================================\n
                          gustavosotnas.github.io is running!\n
                          ===================================")

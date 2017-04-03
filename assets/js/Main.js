@@ -1,11 +1,11 @@
 (function() {
-  define(["views/app"], function(App) {
+  define(["views/AppView"], function(AppView) {
     var Main;
     Main = (function() {
       function Main() {
-        var app;
-        app = new App;
-        $('body').html(app.render().el);
+        var appView;
+        appView = new AppView;
+        $('body').html(appView.render().el);
       }
 
       console.log("====================================\n gustavosotnas.github.io is running!\n ===================================");

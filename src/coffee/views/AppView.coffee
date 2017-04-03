@@ -4,7 +4,7 @@ define [
 	"backbone"
 ], ($, _, Backbone) ->
 
-	class App extends Backbone.View
+	class AppView extends Backbone.View
 
 		tagName: 'h1'
 		id: 'helloworld'
