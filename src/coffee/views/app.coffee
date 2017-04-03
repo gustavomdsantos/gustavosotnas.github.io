@@ -13,3 +13,4 @@ define [
 			console.log "Executando app"
 		render: () ->
 			@$el.html 'Hello World <em>com jQuery</em>'
+			@

@@ -20,7 +20,8 @@
       };
 
       App.prototype.render = function() {
-        return this.$el.html('Hello World <em>com jQuery</em>');
+        this.$el.html('Hello World <em>com jQuery</em>');
+        return this;
       };
 
       return App;
