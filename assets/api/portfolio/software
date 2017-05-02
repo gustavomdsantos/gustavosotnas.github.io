@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "name": "EasyIMC",
+        "logo_url": "../../images/easyimc_logo_header.svg",
+        "description": "Protótipo de sistema Web de consulta de IMC (Índice de Massa Corpórea) de uma pessoa, de forma simples, rápida e fácil.",
+        "description_longer": "<em><b>EasyIMC</b></em> (IMC fácil), é um projeto de um site de consulta de IMC (<em>Índice de Massa Corpórea</em>) de um pessoa, de forma simples, rápida e fácil. Nele, preenche-se um pequeno formulário com <em>Peso</em> (em <em>kg</em>), <em>Altura</em> (em <em>cm</em>), <em>Idade</em> e <em>sexo</em>.",
+        "screenshot_url": "../../easyimc.png",
+        "view_demo_url": "http://gustavosotnas.github.io/DSW-Prototipos-GUI-INF-UFG/easyimc/index.html",
+        "view_source_url": "https://github.com/gustavosotnas/DSW-Prototipos-GUI-INF-UFG",
+        "client": "Walison Moreira",
+        "client_email_or_url": "https://github.com/walisonmoreira",
+        "date": "2016-05",
+        "category": "front-end"
+    }
+]
