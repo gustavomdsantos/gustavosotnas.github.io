@@ -26,6 +26,6 @@
     }
   });
 
-  require(["main"]);
+  require(["Main"]);
 
 }).call(this);

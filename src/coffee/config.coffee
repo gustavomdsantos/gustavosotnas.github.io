@@ -29,4 +29,4 @@ requirejs.config
             deps: ["jquery", "underscore"]
             exports: "Backbone" # explicita nome da lib que deve ser usado no código (opcional)
 
-require(["main"]) # Carrega script principal
+require(["Main"]) # Carrega script principal
