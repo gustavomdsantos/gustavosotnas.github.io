@@ -6,9 +6,8 @@
         var appView;
         appView = new AppView;
         appView.render();
+        console.log(" ===================================\n gustavosotnas.github.io is running!\n ===================================");
       }
-
-      console.log(" ===================================\n gustavosotnas.github.io is running!\n ===================================");
 
       return Main;
 

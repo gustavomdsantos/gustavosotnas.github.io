@@ -1,18 +1,18 @@
 define [
-	"jquery"
-	"underscore"
-	"backbone"
+  "jquery"
+  "underscore"
+  "backbone"
 ], ($, _, Backbone) ->
 
-	class AppView extends Backbone.View
+  class AppView extends Backbone.View
 
-		el: '#helloworld'
+    el: '#helloworld'
 
-		initialize: ->
-			console.log "Pronto para renderizar AppView"
+    initialize: ->
+      console.log "Pronto para renderizar AppView"
 
-		render: ->
-			@$el.append ' <em>com jQuery</em>'
-			console.log "Renderizada AppView"
+    render: ->
+      @$el.append ' <em>com jQuery</em>'
+      console.log "Renderizada AppView"
 
-			@
+      @

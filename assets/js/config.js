@@ -1,7 +1,7 @@
 
 /*
-    O primeiro arquivo JS a ser carregado. Toma cuidado de configurar todos os 
-    caminhos necessários.
+  O primeiro arquivo JS a ser carregado. Toma cuidado de configurar todos os 
+  caminhos necessários.
  */
 
 (function() {
