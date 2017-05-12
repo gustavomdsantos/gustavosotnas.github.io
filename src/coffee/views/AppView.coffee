@@ -12,7 +12,7 @@ define [
 			console.log "Pronto para renderizar AppView"
 
 		render: ->
-			@$el.html 'Hello World <em>com jQuery</em>'
+			@$el.append ' <em>com jQuery</em>'
 			console.log "Renderizada AppView"
 
 			@

@@ -18,7 +18,7 @@
       };
 
       AppView.prototype.render = function() {
-        this.$el.html('Hello World <em>com jQuery</em>');
+        this.$el.append(' <em>com jQuery</em>');
         console.log("Renderizada AppView");
         return this;
       };
