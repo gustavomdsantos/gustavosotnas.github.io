@@ -6,11 +6,13 @@ define [
 
 	class AppView extends Backbone.View
 
-		tagName: 'h1'
-		id: 'helloworld'
+		el: '#helloworld'
 
-		initialize: () ->
-			console.log "Executando app"
-		render: () ->
+		initialize: ->
+			console.log "Pronto para renderizar AppView"
+
+		render: ->
 			@$el.html 'Hello World <em>com jQuery</em>'
+			console.log "Renderizada AppView"
+
 			@

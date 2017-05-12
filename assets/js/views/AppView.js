@@ -11,16 +11,15 @@
         return AppView.__super__.constructor.apply(this, arguments);
       }
 
-      AppView.prototype.tagName = 'h1';
-
-      AppView.prototype.id = 'helloworld';
+      AppView.prototype.el = '#helloworld';
 
       AppView.prototype.initialize = function() {
-        return console.log("Executando app");
+        return console.log("Pronto para renderizar AppView");
       };
 
       AppView.prototype.render = function() {
         this.$el.html('Hello World <em>com jQuery</em>');
+        console.log("Renderizada AppView");
         return this;
       };
 

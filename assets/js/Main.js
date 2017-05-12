@@ -5,10 +5,10 @@
       function Main() {
         var appView;
         appView = new AppView;
-        $('body').html(appView.render().el);
+        appView.render();
       }
 
-      console.log("====================================\n gustavosotnas.github.io is running!\n ===================================");
+      console.log(" ===================================\n gustavosotnas.github.io is running!\n ===================================");
 
       return Main;
 
