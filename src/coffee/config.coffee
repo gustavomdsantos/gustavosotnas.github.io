@@ -31,6 +31,6 @@ requirejs.config
       exports: "Backbone" # explicita nome da lib que deve ser usado no código (opcional)
   map:
     '*':
-      'css': 'assets/css/lib/css.min.js'
+      'css': 'lib/require/css.min'
 
 require(["Main"]) # Carrega script principal

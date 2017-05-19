@@ -27,7 +27,7 @@
     },
     map: {
       '*': {
-        'css': 'assets/css/lib/css.min.js'
+        'css': 'lib/require/css.min'
       }
     }
   });
