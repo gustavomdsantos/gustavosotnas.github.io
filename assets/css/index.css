@@ -7,14 +7,10 @@
   height: 100%;
 }
 #loader {
-  /*position: absolute;
-  left: 50%;
-  top: 50%;*/
   z-index: 1;
-  /*margin: -75px 0 0 -75px;*/
-  border: 8px solid #f3f3f3;
+  border: 8px solid #ECEFF1;
   border-radius: 50%;
-  border-top: 8px solid #3498db;
+  border-top: 8px solid #009688;
   width: 64px;
   height: 64px;
   -webkit-animation: spin 1s linear infinite;
