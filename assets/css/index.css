@@ -1,3 +1,7 @@
+html,
+body {
+  font-size: initial !important;
+}
 .container-loader {
   display: flex;
   position: absolute;
