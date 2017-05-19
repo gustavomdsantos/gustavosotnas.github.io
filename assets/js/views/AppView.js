@@ -5,20 +5,25 @@
   define(["jquery", "underscore", "backbone", "css!styles/appView.css"], function($, _, Backbone) {
     var AppView;
     return AppView = (function(superClass) {
+      var _template;
+
       extend(AppView, superClass);
 
       function AppView() {
         return AppView.__super__.constructor.apply(this, arguments);
       }
 
-      AppView.prototype.el = '#helloworld';
+      AppView.prototype.el = 'body';
+
+      _template = _.template("<h1 id=\"helloworld\">Hello World</h1>");
 
       AppView.prototype.initialize = function() {
         return console.log("Pronto para renderizar AppView");
       };
 
       AppView.prototype.render = function() {
-        this.$el.append(' <em>com jQuery</em>');
+        this.$el.html(_template);
+        $('#helloworld').append(' <em>com jQuery</em>');
         console.log("Renderizada AppView");
         return this;
       };

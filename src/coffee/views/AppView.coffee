@@ -7,13 +7,18 @@ define [
 
   class AppView extends Backbone.View
 
-    el: '#helloworld'
+    el: 'body'
+
+    _template = _.template """
+    <h1 id="helloworld">Hello World</h1>
+    """
 
     initialize: ->
       console.log "Pronto para renderizar AppView"
 
     render: ->
-      @$el.append ' <em>com jQuery</em>'
+      @$el.html _template
+      $('#helloworld').append ' <em>com jQuery</em>'
       console.log "Renderizada AppView"
 
       @
