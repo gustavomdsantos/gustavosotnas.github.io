@@ -1,5 +1,5 @@
 ###
-  O primeiro arquivo JS a ser carregado. Toma cuidado de configurar todos os 
+  O primeiro arquivo JS a ser carregado. Toma cuidado de configurar todos os
   caminhos necessários.
 ###
 
@@ -20,6 +20,7 @@ requirejs.config
       'http://backbonejs.org/backbone-min',
       'lib/backbone-min'
     ]
+    styles: '../css/'
   shim:
     jquery:
       exports: "$" # explicita nome da lib que deve ser usado no código (opcional)
@@ -28,5 +29,8 @@ requirejs.config
     backbone:
       deps: ["jquery", "underscore"]
       exports: "Backbone" # explicita nome da lib que deve ser usado no código (opcional)
+  map:
+    '*':
+      'css': 'assets/css/lib/css.min.js'
 
 require(["Main"]) # Carrega script principal

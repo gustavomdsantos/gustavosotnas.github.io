@@ -1,6 +1,6 @@
 
 /*
-  O primeiro arquivo JS a ser carregado. Toma cuidado de configurar todos os 
+  O primeiro arquivo JS a ser carregado. Toma cuidado de configurar todos os
   caminhos necessários.
  */
 
@@ -10,7 +10,8 @@
     paths: {
       jquery: ['https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min', 'lib/jquery.min'],
       underscore: ['http://underscorejs.org/underscore-min', 'lib/underscore-min'],
-      backbone: ['http://backbonejs.org/backbone-min', 'lib/backbone-min']
+      backbone: ['http://backbonejs.org/backbone-min', 'lib/backbone-min'],
+      styles: '../css/'
     },
     shim: {
       jquery: {
@@ -22,6 +23,11 @@
       backbone: {
         deps: ["jquery", "underscore"],
         exports: "Backbone"
+      }
+    },
+    map: {
+      '*': {
+        'css': 'assets/css/lib/css.min.js'
       }
     }
   });
