@@ -2,7 +2,7 @@ define [
   "jquery"
   "underscore"
   "backbone"
-  "css!styles/appView.css"
+  "css!styles/views/AppView.css"
 ], ($, _, Backbone) ->
 
   class AppView extends Backbone.View

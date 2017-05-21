@@ -2,7 +2,7 @@
   var extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
     hasProp = {}.hasOwnProperty;
 
-  define(["jquery", "underscore", "backbone", "css!styles/appView.css"], function($, _, Backbone) {
+  define(["jquery", "underscore", "backbone", "css!styles/views/AppView.css"], function($, _, Backbone) {
     var AppView;
     return AppView = (function(superClass) {
       var _template, _tintBrowserToolbar, _tintBrowserToolbarTemplate;
