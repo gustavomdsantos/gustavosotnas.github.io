@@ -5,7 +5,7 @@
   define(["jquery", "underscore", "backbone", "css!styles/appView.css"], function($, _, Backbone) {
     var AppView;
     return AppView = (function(superClass) {
-      var _template;
+      var _template, _tintBrowserToolbar, _tintBrowserToolbarTemplate;
 
       extend(AppView, superClass);
 
@@ -15,15 +15,26 @@
 
       AppView.prototype.el = 'body';
 
+      AppView.prototype.appColor = "#009688";
+
       _template = _.template("<h1 id=\"helloworld\">Hello World</h1>");
+
+      _tintBrowserToolbarTemplate = _.template("<!-- Chrome, Firefox OS and Opera -->\n<meta name=\"theme-color\" content=\"<%= color %>\">\n<!-- Windows Phone -->\n<meta name=\"msapplication-navbutton-color\" content=\"<%= color %>\">\n<!-- iOS Safari -->\n<meta name=\"apple-mobile-web-app-status-bar-style\" content=\"<%= color %>\">");
 
       AppView.prototype.initialize = function() {
         return console.log("Pronto para renderizar AppView");
       };
 
+      _tintBrowserToolbar = function(toolbarColor) {
+        return $('head').append(_tintBrowserToolbarTemplate({
+          color: toolbarColor
+        }));
+      };
+
       AppView.prototype.render = function() {
         this.$el.html(_template);
         $('#helloworld').append(' <em>com jQuery</em>');
+        _tintBrowserToolbar(this.appColor);
         console.log("Renderizada AppView");
         return this;
       };
