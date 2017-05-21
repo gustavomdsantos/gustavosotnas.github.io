@@ -7,7 +7,7 @@
 Site pessoal, de apresentação de meu portfólio de projetos pessoais publicados na Internet.
 
 <!-- Usando botão gerado dinamicamente pelo dabuttonfactory.com -->
-[![Acessar Live DEMO](http://dabuttonfactory.com/button.png?t=ACESSAR&f=Roboto-Bold&ts=14&tc=fff&hp=16&vp=8&c=2&bgt=unicolored&bgc=009688&shs=2&shc=eee&sho=s)](http://gustavosotnas.github.io)
+[![Acessar Live DEMO](http://dabuttonfactory.com/button.png?t=ACESSAR&f=Roboto-Bold&ts=14&tc=fff&hp=16&vp=8&c=2&bgt=unicolored&bgc=009688&shs=2&shc=eee&sho=s)](http://rawgit.com/gustavosotnas/gustavosotnas.github.io/develop/index.html)
 
 Site *estático* construído usando as tecnologias / ferramentas:
 
