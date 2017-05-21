@@ -11,7 +11,11 @@ define [
     appColor: "#009688" # Teal 500
 
     _template = _.template """
-    <h1 id="helloworld">Hello World</h1>
+    <header>
+      <div class="container">
+        <h1 id="helloworld">Hello World</h1>
+      </div>
+    </header>
     """
 
     _tintBrowserToolbarTemplate = _.template """

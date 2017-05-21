@@ -17,7 +17,7 @@
 
       AppView.prototype.appColor = "#009688";
 
-      _template = _.template("<h1 id=\"helloworld\">Hello World</h1>");
+      _template = _.template("<header>\n  <div class=\"container\">\n    <h1 id=\"helloworld\">Hello World</h1>\n  </div>\n</header>");
 
       _tintBrowserToolbarTemplate = _.template("<!-- Chrome, Firefox OS and Opera -->\n<meta name=\"theme-color\" content=\"<%= color %>\">\n<!-- Windows Phone -->\n<meta name=\"msapplication-navbutton-color\" content=\"<%= color %>\">\n<!-- iOS Safari -->\n<meta name=\"apple-mobile-web-app-status-bar-style\" content=\"<%= color %>\">");
 
