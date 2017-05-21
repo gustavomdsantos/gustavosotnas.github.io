@@ -5,7 +5,7 @@
   define(["jquery", "underscore", "backbone", "views/HeaderView", "text!templates/views/AppView.htm"], function($, _, Backbone, HeaderView, AppViewTemplate) {
     var AppView;
     return AppView = (function(superClass) {
-      var _template;
+      var _subViews, _template;
 
       extend(AppView, superClass);
 
@@ -15,22 +15,20 @@
 
       AppView.prototype.el = 'body';
 
-      AppView.prototype.subViews = {
-        headerView: new HeaderView
-      };
+      _subViews = [new HeaderView];
 
       _template = _.template(AppViewTemplate);
+
+      AppView.prototype.renderSubViews = function() {
+        return _.each(_subViews, function(subView) {
+          return subView.render();
+        });
+      };
 
       AppView.prototype.render = function() {
         this.$el.html(_template);
         this.renderSubViews();
         return this;
-      };
-
-      AppView.prototype.renderSubViews = function() {
-        return _.each(this.subViews, function(subView) {
-          return subView.render();
-        });
       };
 
       return AppView;

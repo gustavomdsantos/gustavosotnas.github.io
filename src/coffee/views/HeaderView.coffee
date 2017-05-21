@@ -13,5 +13,5 @@ define [
     _template = _.template HeaderViewTemplate
 
     render: ->
-      @$el.html _template
+      $('header').html _template # Estranhamente o $el não funciona aqui
       @

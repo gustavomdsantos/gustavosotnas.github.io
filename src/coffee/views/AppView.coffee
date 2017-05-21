@@ -9,17 +9,18 @@ define [
   class AppView extends Backbone.View
 
     el: 'body'
-    subViews:
-      headerView: new HeaderView
+    _subViews = [
+      new HeaderView
+    ]
 
     _template = _.template AppViewTemplate
+
+    renderSubViews: ->
+      _.each _subViews, (subView) ->
+        subView.render()
 
     render: ->
       @$el.html _template
       @renderSubViews()
 
       @
-
-    renderSubViews: ->
-      _.each @subViews, (subView) ->
-        subView.render()

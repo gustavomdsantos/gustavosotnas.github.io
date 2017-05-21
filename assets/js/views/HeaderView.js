@@ -18,7 +18,7 @@
       _template = _.template(HeaderViewTemplate);
 
       HeaderView.prototype.render = function() {
-        this.$el.html(_template);
+        $('header').html(_template);
         return this;
       };
 
