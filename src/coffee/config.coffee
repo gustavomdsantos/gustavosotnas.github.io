@@ -21,6 +21,7 @@ requirejs.config
       'lib/backbone-min'
     ]
     styles: '../css/'
+    templates: '../../src/templates/'
   shim:
     jquery:
       exports: "$" # explicita nome da lib que deve ser usado no código (opcional)

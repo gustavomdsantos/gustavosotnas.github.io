@@ -2,30 +2,18 @@ define [
   "jquery"
   "underscore"
   "backbone"
+  "text!templates/views/AppView.htm"
+  "text!templates/fragments/TintBrowserToolbar.htm"
   "css!styles/views/AppView.css"
-], ($, _, Backbone) ->
+], ($, _, Backbone, AppViewTemplate, TintBrowserToolbarTemplate) ->
 
   class AppView extends Backbone.View
 
     el: 'body'
     appColor: "#009688" # Teal 500
 
-    _template = _.template """
-    <header>
-      <div class="container">
-        <h1 id="helloworld">Hello World</h1>
-      </div>
-    </header>
-    """
-
-    _tintBrowserToolbarTemplate = _.template """
-    <!-- Chrome, Firefox OS and Opera -->
-    <meta name="theme-color" content="<%= color %>">
-    <!-- Windows Phone -->
-    <meta name="msapplication-navbutton-color" content="<%= color %>">
-    <!-- iOS Safari -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="<%= color %>">
-    """
+    _template = _.template AppViewTemplate
+    _tintBrowserToolbarTemplate = _.template TintBrowserToolbarTemplate
 
     initialize: ->
       console.log "Pronto para renderizar AppView"
