@@ -15,18 +15,12 @@ define [
     _template = _.template AppViewTemplate
     _tintBrowserToolbarTemplate = _.template TintBrowserToolbarTemplate
 
-    initialize: ->
-      console.log "Pronto para renderizar AppView"
-
     _tintBrowserToolbar = (toolbarColor) ->
       $('head').append _tintBrowserToolbarTemplate
         color: toolbarColor
 
     render: ->
       @$el.html _template
-      $('#helloworld').append ' <em>com jQuery</em>'
       _tintBrowserToolbar @appColor
-
-      console.log "Renderizada AppView"
 
       @

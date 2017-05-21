@@ -1,7 +1,13 @@
 @import "../colors";
 
 header {
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh; // 100% of of browser window
   background: linear-gradient(
     180deg, @colorPrimary, @colorPrimaryDark, @colorPrimaryLight);
   background-size: 600% 600%;
@@ -32,7 +38,6 @@ header {
       100%{background-position:51% 0%}
   }
 }
-
-#helloworld {
-  font-size: 2em;
+#person-name {
+  color: white;
 }

@@ -21,10 +21,6 @@
 
       _tintBrowserToolbarTemplate = _.template(TintBrowserToolbarTemplate);
 
-      AppView.prototype.initialize = function() {
-        return console.log("Pronto para renderizar AppView");
-      };
-
       _tintBrowserToolbar = function(toolbarColor) {
         return $('head').append(_tintBrowserToolbarTemplate({
           color: toolbarColor
@@ -33,9 +29,7 @@
 
       AppView.prototype.render = function() {
         this.$el.html(_template);
-        $('#helloworld').append(' <em>com jQuery</em>');
         _tintBrowserToolbar(this.appColor);
-        console.log("Renderizada AppView");
         return this;
       };
 
