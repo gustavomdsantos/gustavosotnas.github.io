@@ -36,9 +36,10 @@ module.exports = (grunt) ->
     less:
       development:
         expand: true
+        flatten: false
         compress: true
         yuicompress: true
         cwd: 'src/less'
-        src: ['*.less']
+        src: ['**/*.less']
         dest: 'assets/css/'
         ext: '.css'
