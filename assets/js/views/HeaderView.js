@@ -19,7 +19,6 @@
 
       HeaderView.prototype.render = function() {
         this.$el.html(_template);
-        console.log("App Color = " + this.appColor);
         return this;
       };
 

@@ -8,35 +8,7 @@ header {
   justify-content: center;
   width: 100%;
   height: 100vh; // 100% of of browser window
-  background: linear-gradient(
-    180deg, @colorPrimary, @colorPrimaryDark, @colorPrimaryLight);
-  background-size: 600% 600%;
-
-  -webkit-animation: teal-dynamic-bg 30s ease infinite;
-  -moz-animation: teal-dynamic-bg 30s ease infinite;
-  -o-animation: teal-dynamic-bg 30s ease infinite;
-  animation: teal-dynamic-bg 30s ease infinite;
-
-  @-webkit-keyframes teal-dynamic-bg {
-      0%{background-position:51% 0%}
-      50%{background-position:50% 100%}
-      100%{background-position:51% 0%}
-  }
-  @-moz-keyframes teal-dynamic-bg {
-      0%{background-position:51% 0%}
-      50%{background-position:50% 100%}
-      100%{background-position:51% 0%}
-  }
-  @-o-keyframes teal-dynamic-bg {
-      0%{background-position:51% 0%}
-      50%{background-position:50% 100%}
-      100%{background-position:51% 0%}
-  }
-  @keyframes teal-dynamic-bg {
-      0%{background-position:51% 0%}
-      50%{background-position:50% 100%}
-      100%{background-position:51% 0%}
-  }
+  background: @colorPrimary;
 }
 #person-name {
   color: white;

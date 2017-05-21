@@ -14,5 +14,4 @@ define [
 
     render: ->
       @$el.html _template
-      console.log "App Color = " + @appColor
       @
