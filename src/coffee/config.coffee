@@ -32,5 +32,6 @@ requirejs.config
   map:
     '*':
       'css': 'lib/require/css.min'
+      'text': 'lib/require/text'
 
 require(["Main"]) # Carrega script principal

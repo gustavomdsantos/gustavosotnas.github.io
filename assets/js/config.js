@@ -27,7 +27,8 @@
     },
     map: {
       '*': {
-        'css': 'lib/require/css.min'
+        'css': 'lib/require/css.min',
+        'text': 'lib/require/text'
       }
     }
   });
