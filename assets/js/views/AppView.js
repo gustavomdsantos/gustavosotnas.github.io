@@ -15,14 +15,22 @@
 
       AppView.prototype.el = 'body';
 
+      AppView.prototype.subViews = {
+        headerView: new HeaderView
+      };
+
       _template = _.template(AppViewTemplate);
 
       AppView.prototype.render = function() {
-        var headerView;
         this.$el.html(_template);
-        headerView = new HeaderView;
-        headerView.render();
+        this.renderSubViews();
         return this;
+      };
+
+      AppView.prototype.renderSubViews = function() {
+        return _.each(this.subViews, function(subView) {
+          return subView.render();
+        });
       };
 
       return AppView;
