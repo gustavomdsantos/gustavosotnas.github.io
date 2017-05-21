@@ -8,7 +8,7 @@ end_of_line = lf
 insert_final_newline = false
 trim_trailing_whitespace = true
 
-[*.{js,coffee,py,rb,css,scss,less,html,jade,erb,json,yml,xml}]
+[*.{js,coffee,py,rb,css,scss,less,htm,html,jade,erb,json,yml,xml}]
 charset = utf-8
 indent_style = space
 indent_size = 2
