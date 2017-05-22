@@ -9,9 +9,8 @@ define [
   class HeaderView extends Backbone.View
 
     el: 'header'
-
-    _template = _.template HeaderViewTemplate
+    template: _.template HeaderViewTemplate
 
     render: ->
-      $('header').html _template # Estranhamente o $el não funciona aqui
+      @$el.html @template
       @

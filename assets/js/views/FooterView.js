@@ -5,8 +5,6 @@
   define(["jquery", "underscore", "backbone", "text!templates/views/FooterView.htm", "css!styles/views/FooterView.css"], function($, _, Backbone, FooterViewTemplate) {
     var FooterView;
     return FooterView = (function(superClass) {
-      var _template;
-
       extend(FooterView, superClass);
 
       function FooterView() {
@@ -15,10 +13,10 @@
 
       FooterView.prototype.el = 'footer';
 
-      _template = _.template(FooterViewTemplate);
+      FooterView.prototype.template = _.template(FooterViewTemplate);
 
       FooterView.prototype.render = function() {
-        $('footer').html(_template);
+        this.$el.html(this.template);
         return this;
       };
 

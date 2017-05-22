@@ -5,8 +5,6 @@
   define(["jquery", "underscore", "backbone", "text!templates/views/HeaderView.htm", "css!styles/views/HeaderView.css"], function($, _, Backbone, HeaderViewTemplate) {
     var HeaderView;
     return HeaderView = (function(superClass) {
-      var _template;
-
       extend(HeaderView, superClass);
 
       function HeaderView() {
@@ -15,10 +13,10 @@
 
       HeaderView.prototype.el = 'header';
 
-      _template = _.template(HeaderViewTemplate);
+      HeaderView.prototype.template = _.template(HeaderViewTemplate);
 
       HeaderView.prototype.render = function() {
-        $('header').html(_template);
+        this.$el.html(this.template);
         return this;
       };
 

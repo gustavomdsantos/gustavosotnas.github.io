@@ -8,3 +8,6 @@ header {
   min-height: 500px;
   background: #009688;
 }
+#person-name {
+  font-size: 4em;
+}
