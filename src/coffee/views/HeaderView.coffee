@@ -2,10 +2,11 @@ define [
   "jquery"
   "underscore"
   "backbone"
+  "typed"
   "models/PersonModel"
   "text!templates/views/HeaderView.htm"
   "css!styles/views/HeaderView.css"
-], ($, _, Backbone, Person, HeaderViewTemplate) ->
+], ($, _, Backbone, Typed, Person, HeaderViewTemplate) ->
 
   class HeaderView extends Backbone.View
 
@@ -35,10 +36,21 @@ define [
         bitbucket: "https://bitbucket.org/gustavosotnas"
         gitlab: "https://gitlab.com/gustavosotnas"
 
+    _enableTypedSkills = ->
+      $("#typed-person-skills").typed
+        stringsElement: $("#person-skills")
+        startDelay: 500
+        typeSpeed: 50
+        backDelay: 3000
+        backSpeed: 10
+        loop: true
+
     render: ->
-      console.log @person
       @$el.html @template
         personName: @person.get("name")
         personImage: @person.get("profileImage")
         personSkills: @person.get("skills")
+
+      _enableTypedSkills()
+
       @
