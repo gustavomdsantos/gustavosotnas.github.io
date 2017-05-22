@@ -3,14 +3,16 @@ define [
   "underscore"
   "backbone"
   "views/HeaderView"
+  "views/FooterView"
   "text!templates/views/AppView.htm"
-], ($, _, Backbone, HeaderView, AppViewTemplate) ->
+], ($, _, Backbone, HeaderView, FooterView, AppViewTemplate) ->
 
   class AppView extends Backbone.View
 
     el: 'body'
     _subViews = [
       new HeaderView
+      new FooterView
     ]
 
     _template = _.template AppViewTemplate
