@@ -40,7 +40,7 @@ define [
       $("#typed-person-skills").typed
         stringsElement: $("#person-skills")
         startDelay: 500
-        typeSpeed: 50
+        typeSpeed: 80
         backDelay: 3000
         backSpeed: 10
         loop: true
