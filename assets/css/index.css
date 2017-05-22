@@ -2,6 +2,24 @@ html,
 body {
   font-size: initial !important;
 }
+html .text-in-dark-bg,
+body .text-in-dark-bg {
+  color: #FAFAFA;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  color: inherit;
+}
 .container-loader {
   display: flex;
   flex-direction: column;

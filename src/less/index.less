@@ -4,7 +4,12 @@
 // Allowing to use "em" unit meter
 html, body {
   font-size: initial !important;
+  .text-in-dark-bg { color: @colorLightBackground; }
 }
+
+// Reset bootstrap.css font color overridings
+// Allowing to use class "text-in-dark-bg"
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { color: inherit; }
 
 .container-loader {
   display: flex;
