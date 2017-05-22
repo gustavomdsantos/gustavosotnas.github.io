@@ -1,3 +1,9 @@
 <div class="text-in-dark-bg">
-  <h1 id="person-name">Gustavo Moraes</h1>
+  <img id="person-image" src="<%= personImage %>" alt="<%= personName %> profile image">
+  <h1 id="person-name"><%= personName %></h1>
+  <p id="person-skills">
+    <% _.each(personSkills, function(personSkill) { %>
+      <span><%= personSkill %></span>
+    <% }); %>
+  </p>
 </div>
