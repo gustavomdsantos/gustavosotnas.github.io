@@ -18,11 +18,15 @@
       AppView.prototype.subViews = [HeaderView, FooterView];
 
       AppView.prototype.renderSubViews = function() {
-        return _.each(this.subViews, function(subView) {
-          var _subView;
+        var _subView, i, len, ref, results, subView;
+        ref = this.subViews;
+        results = [];
+        for (i = 0, len = ref.length; i < len; i++) {
+          subView = ref[i];
           _subView = new subView;
-          return _subView.render();
-        });
+          results.push(_subView.render());
+        }
+        return results;
       };
 
       AppView.prototype.render = function() {

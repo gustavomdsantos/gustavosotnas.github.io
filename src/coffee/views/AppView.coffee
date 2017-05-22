@@ -17,7 +17,7 @@ define [
     ]
 
     renderSubViews: ->
-      _.each @subViews, (subView) ->
+      for subView in @subViews
         _subView = new subView
         _subView.render()
 
