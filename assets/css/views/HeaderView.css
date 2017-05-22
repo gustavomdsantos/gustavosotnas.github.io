@@ -6,4 +6,6 @@ header {
   height: 100vh;
   min-height: 422px;
   background: #009688;
+  background-image: url("../../../images/bg.png");
+  background-size: cover;
 }
