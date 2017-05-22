@@ -6,6 +6,10 @@ html .text-in-dark-bg,
 body .text-in-dark-bg {
   color: #FAFAFA;
 }
+html .text-center,
+body .text-center {
+  text-align: center;
+}
 h1,
 h2,
 h3,
