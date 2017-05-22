@@ -17,4 +17,4 @@ require('http').createServer(function (request, response) {
     }).resume();
 }).listen(process.env.PORT || _port);
 
-console.log("Listening to port " + _port);
+console.log("Listening on port " + _port);
