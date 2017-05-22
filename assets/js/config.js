@@ -11,6 +11,7 @@
       jquery: ['https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min', 'lib/jquery.min'],
       underscore: ['http://underscorejs.org/underscore-min', 'lib/underscore-min'],
       backbone: ['http://backbonejs.org/backbone-min', 'lib/backbone-min'],
+      typed: 'lib/typed.min',
       styles: '../css/',
       templates: '../../src/templates/'
     },
@@ -24,6 +25,10 @@
       backbone: {
         deps: ["jquery", "underscore"],
         exports: "Backbone"
+      },
+      typed: {
+        deps: ["jquery"],
+        exports: "Typed"
       }
     },
     map: {

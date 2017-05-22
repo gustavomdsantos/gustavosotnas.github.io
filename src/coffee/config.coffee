@@ -20,6 +20,7 @@ requirejs.config
       'http://backbonejs.org/backbone-min',
       'lib/backbone-min'
     ]
+    typed: 'lib/typed.min'
     styles: '../css/'
     templates: '../../src/templates/'
   shim:
@@ -30,6 +31,9 @@ requirejs.config
     backbone:
       deps: ["jquery", "underscore"]
       exports: "Backbone" # explicita nome da lib que deve ser usado no código (opcional)
+    typed:
+      deps: ["jquery"]
+      exports: "Typed"
   map:
     '*':
       'css': 'lib/require/css.min'
