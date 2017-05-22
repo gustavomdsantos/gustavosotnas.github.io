@@ -80,7 +80,7 @@
 
       HeaderView.prototype.render = function() {
         var parallaxSpeed;
-        parallaxSpeed = 5;
+        parallaxSpeed = 3;
         this.$el.html(this.template);
         this.renderSubViews();
         _enableParallax(parallaxSpeed);

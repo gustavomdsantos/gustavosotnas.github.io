@@ -64,7 +64,7 @@ define [
           $obj.css 'background-position', bgpos
 
     render: ->
-      parallaxSpeed = 5
+      parallaxSpeed = 3
 
       @$el.html @template
       @renderSubViews()
