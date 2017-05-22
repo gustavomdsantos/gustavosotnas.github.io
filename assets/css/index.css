@@ -10,6 +10,10 @@ html .text-center,
 body .text-center {
   text-align: center;
 }
+html .view-content,
+body .view-content {
+  margin: 16px 0;
+}
 h1,
 h2,
 h3,
