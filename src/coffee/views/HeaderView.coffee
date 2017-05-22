@@ -55,8 +55,19 @@ define [
             _personSkillsView = new subView @person.get("skills")
             _personSkillsView.render()
 
+    _enableParallax = (speed) ->
+      $('.bgParallax').each ->
+        $obj = $(@)
+        $(window).scroll ->
+          yPos = -($(window).scrollTop() / speed)
+          bgpos = '50% ' + yPos + 'px'
+          $obj.css 'background-position', bgpos
+
     render: ->
+      parallaxSpeed = 5
+
       @$el.html @template
       @renderSubViews()
+      _enableParallax parallaxSpeed
 
       @

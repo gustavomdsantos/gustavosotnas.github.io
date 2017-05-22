@@ -8,4 +8,7 @@ header {
   background: #009688;
   background-image: url("../../../images/bg.png");
   background-size: cover;
+  background-position: 50% 0;
+  background-repeat: repeat;
+  background-attachment: fixed;
 }

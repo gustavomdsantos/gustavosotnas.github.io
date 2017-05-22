@@ -5,6 +5,8 @@
   define(["jquery", "underscore", "backbone", "views/header/PersonImageView", "views/header/PersonNameView", "views/header/PersonSkillsView", "models/PersonModel", "text!templates/views/HeaderView.htm", "css!styles/views/HeaderView.css"], function($, _, Backbone, PersonImageView, PersonNameView, PersonSkillsView, Person, HeaderViewTemplate) {
     var HeaderView;
     return HeaderView = (function(superClass) {
+      var _enableParallax;
+
       extend(HeaderView, superClass);
 
       function HeaderView() {
@@ -63,9 +65,25 @@
         return results;
       };
 
+      _enableParallax = function(speed) {
+        return $('.bgParallax').each(function() {
+          var $obj;
+          $obj = $(this);
+          return $(window).scroll(function() {
+            var bgpos, yPos;
+            yPos = -($(window).scrollTop() / speed);
+            bgpos = '50% ' + yPos + 'px';
+            return $obj.css('background-position', bgpos);
+          });
+        });
+      };
+
       HeaderView.prototype.render = function() {
+        var parallaxSpeed;
+        parallaxSpeed = 5;
         this.$el.html(this.template);
         this.renderSubViews();
+        _enableParallax(parallaxSpeed);
         return this;
       };
 
