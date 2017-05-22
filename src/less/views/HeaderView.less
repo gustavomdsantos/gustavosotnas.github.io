@@ -1,5 +1,4 @@
 @import "../colors";
-@import url('https://fonts.googleapis.com/css?family=Dosis:200');
 
 header {
   flex-direction: column;
@@ -9,35 +8,4 @@ header {
   height: 100vh; // 100% of of browser window
   min-height: 422px;
   background: @colorPrimary;
-}
-
-#person-name {
-  font-family: 'Dosis', sans-serif;
-  font-weight: 200;
-  font-size: 4em;
-}
-
-#person-image { border-radius: 50%; }
-
-.typed-cursor {
-  opacity: 1;
-  -webkit-animation: blink 0.7s infinite;
-  -moz-animation: blink 0.7s infinite;
-  animation: blink 0.7s infinite;
-}
-
-@keyframes blink{
-  0% { opacity:1; }
-  50% { opacity:0; }
-  100% { opacity:1; }
-}
-@-webkit-keyframes blink{
-  0% { opacity:1; }
-  50% { opacity:0; }
-  100% { opacity:1; }
-}
-@-moz-keyframes blink{
-  0% { opacity:1; }
-  50% { opacity:0; }
-  100% { opacity:1; }
 }

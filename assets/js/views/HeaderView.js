@@ -2,11 +2,9 @@
   var extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
     hasProp = {}.hasOwnProperty;
 
-  define(["jquery", "underscore", "backbone", "typed", "models/PersonModel", "text!templates/views/HeaderView.htm", "css!styles/views/HeaderView.css"], function($, _, Backbone, Typed, Person, HeaderViewTemplate) {
+  define(["jquery", "underscore", "backbone", "views/header/PersonImageView", "views/header/PersonNameView", "views/header/PersonSkillsView", "models/PersonModel", "text!templates/views/HeaderView.htm", "css!styles/views/HeaderView.css"], function($, _, Backbone, PersonImageView, PersonNameView, PersonSkillsView, Person, HeaderViewTemplate) {
     var HeaderView;
     return HeaderView = (function(superClass) {
-      var _enableTypedSkills;
-
       extend(HeaderView, superClass);
 
       function HeaderView() {
@@ -16,6 +14,8 @@
       HeaderView.prototype.el = 'header';
 
       HeaderView.prototype.template = _.template(HeaderViewTemplate);
+
+      HeaderView.prototype.subViews = [PersonImageView, PersonNameView, PersonSkillsView];
 
       HeaderView.prototype.person = new Person({
         name: "Gustavo Moraes",
@@ -37,24 +37,35 @@
         }
       });
 
-      _enableTypedSkills = function() {
-        return $("#typed-person-skills").typed({
-          stringsElement: $("#person-skills"),
-          startDelay: 500,
-          typeSpeed: 80,
-          backDelay: 3000,
-          backSpeed: 10,
-          loop: true
-        });
+      HeaderView.prototype.renderSubViews = function() {
+        var _personImageView, _personNameView, _personSkillsView, i, len, ref, results, subView;
+        ref = this.subViews;
+        results = [];
+        for (i = 0, len = ref.length; i < len; i++) {
+          subView = ref[i];
+          switch (subView.name) {
+            case "PersonImageView":
+              _personImageView = new subView(this.person.get("name"), this.person.get("profileImage"));
+              results.push(_personImageView.render());
+              break;
+            case "PersonNameView":
+              _personNameView = new subView(this.person.get("name"));
+              results.push(_personNameView.render());
+              break;
+            case "PersonSkillsView":
+              _personSkillsView = new subView(this.person.get("skills"));
+              results.push(_personSkillsView.render());
+              break;
+            default:
+              results.push(void 0);
+          }
+        }
+        return results;
       };
 
       HeaderView.prototype.render = function() {
-        this.$el.html(this.template({
-          personName: this.person.get("name"),
-          personImage: this.person.get("profileImage"),
-          personSkills: this.person.get("skills")
-        }));
-        _enableTypedSkills();
+        this.$el.html(this.template);
+        this.renderSubViews();
         return this;
       };
 

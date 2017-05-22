@@ -2,17 +2,23 @@ define [
   "jquery"
   "underscore"
   "backbone"
-  "typed"
+  "views/header/PersonImageView"
+  "views/header/PersonNameView"
+  "views/header/PersonSkillsView"
   "models/PersonModel"
   "text!templates/views/HeaderView.htm"
   "css!styles/views/HeaderView.css"
-], ($, _, Backbone, Typed, Person, HeaderViewTemplate) ->
+], ($, _, Backbone, PersonImageView, PersonNameView, PersonSkillsView, Person, HeaderViewTemplate) ->
 
   class HeaderView extends Backbone.View
 
     el: 'header'
     template: _.template HeaderViewTemplate
-
+    subViews: [
+      PersonImageView
+      PersonNameView
+      PersonSkillsView
+    ]
     person: new Person
       name: "Gustavo Moraes"
       skills: [
@@ -36,21 +42,21 @@ define [
         bitbucket: "https://bitbucket.org/gustavosotnas"
         gitlab: "https://gitlab.com/gustavosotnas"
 
-    _enableTypedSkills = ->
-      $("#typed-person-skills").typed
-        stringsElement: $("#person-skills")
-        startDelay: 500
-        typeSpeed: 80
-        backDelay: 3000
-        backSpeed: 10
-        loop: true
+    renderSubViews: ->
+      for subView in @subViews
+        switch subView.name
+          when "PersonImageView"
+            _personImageView = new subView @person.get("name"), @person.get("profileImage")
+            _personImageView.render()
+          when "PersonNameView"
+            _personNameView = new subView @person.get("name")
+            _personNameView.render()
+          when "PersonSkillsView"
+            _personSkillsView = new subView @person.get("skills")
+            _personSkillsView.render()
 
     render: ->
       @$el.html @template
-        personName: @person.get("name")
-        personImage: @person.get("profileImage")
-        personSkills: @person.get("skills")
-
-      _enableTypedSkills()
+      @renderSubViews()
 
       @
