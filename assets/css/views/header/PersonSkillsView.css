@@ -1,3 +1,8 @@
+#person-skills-view,
+#typed-person-skills,
+.typed-cursor {
+  font-size: 1.25em;
+}
 .typed-cursor {
   opacity: 1;
   -webkit-animation: blink 0.7s infinite;

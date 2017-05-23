@@ -1,4 +1,5 @@
 @import "colors";
+@import "dimens";
 
 // Reset bootstrap.css font-size overridings
 // Allowing to use "em" unit meter
@@ -12,6 +13,9 @@ html, body {
 // Reset bootstrap.css font color overridings
 // Allowing to use class "text-in-dark-bg"
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { color: inherit; }
+
+// Override bootstrap.css default font-size to "em" unit meter
+.container { font-size: @font-size-normal; }
 
 .container-flexbox {
   display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6 */
@@ -29,6 +33,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { color: inherit; }
   width: 100%;
   height: 100%;
 }
+
+#loading { font-size: @font-size-normal; }
 
 #loader {
   z-index: 1;
