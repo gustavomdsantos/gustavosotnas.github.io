@@ -55,9 +55,21 @@
        */
 
       Main.tintBrowserToolbar = function(toolbarColor) {
-        return $('head').append(_template({
-          color: toolbarColor
-        }));
+        var existMetadata, i, len, metadata, metadatas, results;
+        metadatas = $('meta[name=theme-color], [name=msapplication-navbutton-color], [name=apple-mobile-web-app-status-bar-style]');
+        existMetadata = metadatas.length;
+        if (!existMetadata) {
+          return $('head').append(_template({
+            color: toolbarColor
+          }));
+        } else {
+          results = [];
+          for (i = 0, len = metadatas.length; i < len; i++) {
+            metadata = metadatas[i];
+            results.push(metadata.content = toolbarColor);
+          }
+          return results;
+        }
       };
 
       return Main;

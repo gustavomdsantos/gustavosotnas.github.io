@@ -49,8 +49,17 @@ define [
      * Main.tintBrowserToolbar("#FF0000")
     ###
     @tintBrowserToolbar: (toolbarColor) ->
-      $('head').append _template
-        color: toolbarColor
+      metadatas = $('meta[name=theme-color],
+                         [name=msapplication-navbutton-color],
+                         [name=apple-mobile-web-app-status-bar-style]')
+      existMetadata = metadatas.length
+
+      if not existMetadata
+        $('head').append _template
+          color: toolbarColor
+      else
+        for metadata in metadatas
+          metadata.content = toolbarColor;
 
   # cria uma instância da classe e executa ela mesma
   new Main()
