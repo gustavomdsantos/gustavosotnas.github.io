@@ -1,0 +1,9 @@
+--name       "Gustavo Moraes"
+--readme     README.md
+--title      "Documentação do código do site gustavosotnas.github.io"
+--private
+--extension  coffee
+--output     ./doc
+./src/coffee
+-
+LICENSE
