@@ -4,14 +4,15 @@
 
   define(["jquery", "underscore", "backbone", "text!templates/views/header/PersonNameView.htm", "css!styles/views/header/PersonNameView.css"], function($, _, Backbone, PersonNameViewTemplate) {
 
-    /*
-    View responsável por exibir o nome do proprietário do site.
-    
-    @extend {Backbone.View}
-    @example personNameView = new PersonNameView "Gustavo Moraes"
-    personNameView.render()
-    
-    @author gustavosotnas
+    /**
+     * View responsável por exibir o nome do proprietário do site.
+     *
+     * @extends {Backbone.View}
+     * @example
+     * personNameView = new PersonNameView "Gustavo Moraes"
+     * personNameView.render()
+     *
+     * @author gustavosotnas
      */
     var PersonNameView;
     return PersonNameView = (function(superClass) {
@@ -26,17 +27,17 @@
       PersonNameView.prototype.template = _.template(PersonNameViewTemplate);
 
 
-      /*
-      O nome do proprietário do site.
-      @type {String}
+      /**
+       * O nome do proprietário do site.
+       * @type {String}
        */
 
       PersonNameView.prototype.personName = "";
 
 
-      /*
-      Construtor de PersonNameView.
-      @param  {String} name o nome do proprietário do site.
+      /**
+       * Construtor de PersonNameView.
+       * @param  {String} name o nome do proprietário do site.
        */
 
       PersonNameView.prototype.initialize = function(name) {
@@ -44,12 +45,12 @@
       };
 
 
-      /*
-      Renderiza a view com o nome do proprietário do site.
-      
-      @uses this.template template da view.
-      @uses this.personName o nome do proprietário do site.
-      @return {PersonNameView} ela mesma.
+      /**
+       * Renderiza a view com o nome do proprietário do site.
+       *
+       * @uses this.template template da view.
+       * @uses this.personName o nome do proprietário do site.
+       * @return {PersonNameView} ela mesma.
        */
 
       PersonNameView.prototype.render = function() {

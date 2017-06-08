@@ -4,14 +4,15 @@
 
   define(["jquery", "underscore", "backbone", "text!templates/views/FooterView.htm", "css!styles/views/FooterView.css"], function($, _, Backbone, FooterViewTemplate) {
 
-    /*
-    View responsável pelo rodapé da página.
-    
-    @extend {Backbone.View}
-    @example footerView = new FooterView
-    footerView.render()
-    
-    @author gustavosotnas
+    /**
+     * View responsável pelo rodapé da página.
+     *
+     * @extends {Backbone.View}
+     * @example
+     * footerView = new FooterView
+     * footerView.render()
+     *
+     * @author gustavosotnas
      */
     var FooterView;
     return FooterView = (function(superClass) {
@@ -26,11 +27,11 @@
       FooterView.prototype.template = _.template(FooterViewTemplate);
 
 
-      /*
-      Renderiza a view.
-      
-      @uses this.template template da view.
-      @return {FooterView} ela mesma.
+      /**
+       * Renderiza a view.
+       *
+       * @uses this.template template da view.
+       * @return {FooterView} ela mesma.
        */
 
       FooterView.prototype.render = function() {

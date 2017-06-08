@@ -10,14 +10,15 @@ define [
   "css!styles/views/HeaderView.css"
 ], ($, _, Backbone, PersonImageView, PersonNameView, PersonSkillsView, Person, HeaderViewTemplate) ->
 
-  ###
-  View responsável pelo cabeçalho do tipo banner da página.
-
-  @extend {Backbone.View}
-  @example footerView = new FooterView
-  footerView.render()
-
-  @author gustavosotnas
+  ###*
+   * View responsável pelo cabeçalho do tipo banner da página.
+   *
+   * @extends {Backbone.View}
+   * @example
+   * footerView = new FooterView
+   * footerView.render()
+   *
+   * @author gustavosotnas
   ###
   class HeaderView extends Backbone.View
 
@@ -28,9 +29,9 @@ define [
       PersonNameView
       PersonSkillsView
     ]
-    ###
-    Model que contêm as informações da pessoa que é proprietária do site.
-    @type {Person}
+    ###*
+     * Model que contêm as informações da pessoa que é proprietária do site.
+     * @type {Person}
     ###
     person: new Person
       name: "Gustavo Moraes"
@@ -55,11 +56,11 @@ define [
         bitbucket: "https://bitbucket.org/gustavosotnas"
         gitlab: "https://gitlab.com/gustavosotnas"
 
-    ###
-    Personalização da função "renderSubViews" para subviews de HeaderView,
-    que precisam de informações do model como parâmetro para se renderizarem.
-
-    @uses this.subViews a lista de subviews.
+    ###*
+     * Personalização da função "renderSubViews" para subviews de HeaderView,
+     * que precisam de informações do model como parâmetro para se renderizarem.
+     *
+     * @uses this.subViews a lista de subviews.
     ###
     renderSubViews: ->
       for subView in @subViews
@@ -74,16 +75,17 @@ define [
             _personSkillsView = new subView @person.get("skills")
             _personSkillsView.render()
 
-    ###
-    @private Ativa o efeito paralaxe em todos os elementos HTML que tiverem a
-    classe '.bgParallax'.
-
-    @param  {number} speed a velocidade do efeito paralaxe. Quanto maior o
-    número, a imagem tenderá a ficar estática, quanto menor o número, mais a
-    imagem se movimentará (0 fará a imagem se movimentar como se não tivesse
-    o efeito paralaxe).
-    @example   _enableParallax 3
-    @see https://tableless.com.br/parallax-simples-com-jquery-e-css
+    ###*
+     * @private Ativa o efeito paralaxe em todos os elementos HTML que tiverem a
+     * classe '.bgParallax'.
+     *
+     * @param  {number} speed a velocidade do efeito paralaxe. Quanto maior o
+     * número, a imagem tenderá a ficar estática, quanto menor o número, mais a
+     * imagem se movimentará (0 fará a imagem se movimentar como se não tivesse
+     * o efeito paralaxe).
+     * @example
+     * _enableParallax 3
+     * @see https://tableless.com.br/parallax-simples-com-jquery-e-css
     ###
     _enableParallax = (speed) ->
       $('.bgParallax').each ->
@@ -93,11 +95,11 @@ define [
           bgpos = '50% ' + yPos + 'px'
           $obj.css 'background-position', bgpos
 
-    ###
-    Renderiza a view com suas subviews e ativando o efeito paralaxe.
-
-    @uses this.template template da view.
-    @return {HeaderView} ela mesma.
+    ###*
+     * Renderiza a view com suas subviews e ativando o efeito paralaxe.
+     *
+     * @uses this.template template da view.
+     * @return {HeaderView} ela mesma.
     ###
     render: ->
       parallaxSpeed = 3
