@@ -4,17 +4,16 @@
 
   define(["jquery", "underscore", "backbone", "typed", "text!templates/views/header/PersonSkillsView.htm", "css!styles/views/header/PersonSkillsView.css"], function($, _, Backbone, Typed, PersonSkillsViewTemplate) {
 
-    /**
-     * View responsável por exibir a lista de habilidades do proprietário do site
-     * na forma de animação de uma pessoa digitando e apagando texto num editor de
-     * texto.
-     *
-     * @extends {Backbone.View}
-     * @example
-     * personSkillsView = new PersonSkillsView ["Engenheiro de Software", "Artista gráfico", "Produtor musical"]
-     * personSkillsView.render()
-     *
-     * @author gustavosotnas
+    /*
+    View responsável por exibir a lista de habilidades do proprietário do site
+    na forma de animação de uma pessoa digitando e apagando texto num editor de
+    texto.
+    
+    @extend {Backbone.View}
+    @example personSkillsView = new PersonSkillsView ["Engenheiro de Software", "Artista gráfico", "Produtor musical"]
+    personSkillsView.render()
+    
+    @author gustavosotnas
      */
     var PersonSkillsView;
     return PersonSkillsView = (function(superClass) {
@@ -31,17 +30,17 @@
       PersonSkillsView.prototype.template = _.template(PersonSkillsViewTemplate);
 
 
-      /**
-       * A lista de habilidades do proprietário do site.
-       * @type {String[]}
+      /*
+      A lista de habilidades do proprietário do site.
+      @type {String[]}
        */
 
       PersonSkillsView.prototype.personSkills = [];
 
 
-      /**
-       * Construtor de PersonSkillsView.
-       * @param  {String[]} skills a lista de habilidades do proprietário do site.
+      /*
+      Construtor de PersonSkillsView.
+      @param  {String[]} skills a lista de habilidades do proprietário do site.
        */
 
       PersonSkillsView.prototype.initialize = function(skills) {
@@ -49,12 +48,12 @@
       };
 
 
-      /**
-       * Ativa a animação de digitação da lista de habilidades do proprietário do
-       * site, usando a biblioteca Typed.js
-       *
-       * @uses Typed lib Typed.js, faz animação com a digitação de uma pessoa.
-       * @see https://github.com/mattboldt/typed.js
+      /*
+      Ativa a animação de digitação da lista de habilidades do proprietário do
+      site, usando a biblioteca Typed.js
+      
+      @uses Typed lib Typed.js, faz animação com a digitação de uma pessoa.
+      @see https://github.com/mattboldt/typed.js
        */
 
       _enableTypedSkills = function() {
@@ -69,12 +68,12 @@
       };
 
 
-      /**
-       * Renderiza a view com a lista de habilidades.
-       *
-       * @uses this.template template da view.
-       * @uses this.personSkills a lista de habilidades do proprietário do site.
-       * @return {PersonSkillsView} ela mesma.
+      /*
+      Renderiza a view com a lista de habilidades.
+      
+      @uses this.template template da view.
+      @uses this.personSkills a lista de habilidades do proprietário do site.
+      @return {PersonSkillsView} ela mesma.
        */
 
       PersonSkillsView.prototype.render = function() {

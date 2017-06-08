@@ -4,14 +4,13 @@
 
   define(["jquery", "underscore", "backbone"], function($, _, Backbone) {
 
-    /**
-     * Modelo de dados pessoais e profissionais de uma pessoa, o proprietário do
-     * site.
-     *
-     * @extends {Backbone.Model}
-     * @example
-     * gustavo = new Person
-     *  name: "Gustavo Moraes"
+    /*
+    Modelo de dados pessoais e profissionais de uma pessoa, o proprietário do
+    site.
+    
+    @extend {Backbone.Model}
+    @example gustavo = new Person
+     name: "Gustavo Moraes"
         skills: [
           "Engenheiro de Software"
           "Artista gráfico"
@@ -42,44 +41,44 @@
       }
 
 
-      /**
-       * Estrutura de dados padrão do Model `Person`. Os valores atribuídos são
-       * apenas para fins de exemplo.
-       *
-       * @type {Object}
+      /*
+      Estrutura de dados padrão do Model `Person`. Os valores atribuídos são
+      apenas para fins de exemplo.
+      
+      @type {Object}
        */
 
       Person.prototype.defaults = {
 
-        /**
-         * O nome da pessoa.
-         * @type {String}
+        /*
+        O nome da pessoa.
+        @type {String}
          */
         name: "Foobar",
 
-        /**
-         * A lista de habilidades da pessoa.
-         * @type {String[]}
+        /*
+        A lista de habilidades da pessoa.
+        @type {String[]}
          */
         skills: ["Programmer", "Photographer", "Football player"],
 
-        /**
-         * A URL da imagem de perfil da pessoa.
-         * @type {String}
+        /*
+        A URL da imagem de perfil da pessoa.
+        @type {String}
          */
         profileImage: "http://placehold.it/256x256",
 
-        /**
-         * O endereço de e-mail da pessoa, para entrar em contato.
-         * @type {String}
+        /*
+        O endereço de e-mail da pessoa, para entrar em contato.
+        @type {String}
          */
         email: "example@example.com",
 
-        /**
-         * Links para sites, blogs e redes sociais da pessoa.
-         * Podem ser incluídos quantos links quiser desde que especifique o nome
-         * da rede social corretamente.
-         * @type {Object}
+        /*
+        Links para sites, blogs e redes sociais da pessoa.
+        Podem ser incluídos quantos links quiser desde que especifique o nome
+        da rede social corretamente.
+        @type {Object}
          */
         socialNetworks: {
           blogsite: "http://example.com",
