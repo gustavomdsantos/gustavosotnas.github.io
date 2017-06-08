@@ -1,7 +1,12 @@
 
 /*
-  O primeiro arquivo JS a ser carregado. Toma cuidado de configurar todos os
-  caminhos necessários.
+ * config: Script de inicialização do projeto no RequireJS.
+ * Responsável por configurar todos os caminhos de libs necessários.
+ *
+ * É o primeiro arquivo JS a ser carregado (depois do próprio RequireJS, no
+ * `index.html`.
+ *
+ * @author gustavosotnas
  */
 
 (function() {

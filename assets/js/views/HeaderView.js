@@ -3,6 +3,17 @@
     hasProp = {}.hasOwnProperty;
 
   define(["jquery", "underscore", "backbone", "views/header/PersonImageView", "views/header/PersonNameView", "views/header/PersonSkillsView", "models/PersonModel", "text!templates/views/HeaderView.htm", "css!styles/views/HeaderView.css"], function($, _, Backbone, PersonImageView, PersonNameView, PersonSkillsView, Person, HeaderViewTemplate) {
+
+    /**
+     * View responsável pelo cabeçalho do tipo banner da página.
+     *
+     * @extends {Backbone.View}
+     * @example
+     * footerView = new FooterView
+     * footerView.render()
+     *
+     * @author gustavosotnas
+     */
     var HeaderView;
     return HeaderView = (function(superClass) {
       var _enableParallax;
@@ -18,6 +29,12 @@
       HeaderView.prototype.template = _.template(HeaderViewTemplate);
 
       HeaderView.prototype.subViews = [PersonImageView, PersonNameView, PersonSkillsView];
+
+
+      /**
+       * Model que contêm as informações da pessoa que é proprietária do site.
+       * @type {Person}
+       */
 
       HeaderView.prototype.person = new Person({
         name: "Gustavo Moraes",
@@ -38,6 +55,14 @@
           gitlab: "https://gitlab.com/gustavosotnas"
         }
       });
+
+
+      /**
+       * Personalização da função "renderSubViews" para subviews de HeaderView,
+       * que precisam de informações do model como parâmetro para se renderizarem.
+       *
+       * @uses this.subViews a lista de subviews.
+       */
 
       HeaderView.prototype.renderSubViews = function() {
         var _personImageView, _personNameView, _personSkillsView, i, len, ref, results, subView;
@@ -65,6 +90,20 @@
         return results;
       };
 
+
+      /**
+       * @private Ativa o efeito paralaxe em todos os elementos HTML que tiverem a
+       * classe '.bgParallax'.
+       *
+       * @param  {number} speed a velocidade do efeito paralaxe. Quanto maior o
+       * número, a imagem tenderá a ficar estática, quanto menor o número, mais a
+       * imagem se movimentará (0 fará a imagem se movimentar como se não tivesse
+       * o efeito paralaxe).
+       * @example
+       * _enableParallax 3
+       * @see https://tableless.com.br/parallax-simples-com-jquery-e-css
+       */
+
       _enableParallax = function(speed) {
         return $('.bgParallax').each(function() {
           var $obj;
@@ -77,6 +116,14 @@
           });
         });
       };
+
+
+      /**
+       * Renderiza a view com suas subviews e ativando o efeito paralaxe.
+       *
+       * @uses this.template template da view.
+       * @return {HeaderView} ela mesma.
+       */
 
       HeaderView.prototype.render = function() {
         var parallaxSpeed;

@@ -3,6 +3,17 @@
     hasProp = {}.hasOwnProperty;
 
   define(["jquery", "underscore", "backbone", "text!templates/views/FooterView.htm", "css!styles/views/FooterView.css"], function($, _, Backbone, FooterViewTemplate) {
+
+    /**
+     * View responsável pelo rodapé da página.
+     *
+     * @extends {Backbone.View}
+     * @example
+     * footerView = new FooterView
+     * footerView.render()
+     *
+     * @author gustavosotnas
+     */
     var FooterView;
     return FooterView = (function(superClass) {
       extend(FooterView, superClass);
@@ -14,6 +25,14 @@
       FooterView.prototype.el = 'footer';
 
       FooterView.prototype.template = _.template(FooterViewTemplate);
+
+
+      /**
+       * Renderiza a view.
+       *
+       * @uses this.template template da view.
+       * @return {FooterView} ela mesma.
+       */
 
       FooterView.prototype.render = function() {
         this.$el.html(this.template);

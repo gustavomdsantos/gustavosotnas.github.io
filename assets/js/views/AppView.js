@@ -3,6 +3,17 @@
     hasProp = {}.hasOwnProperty;
 
   define(["jquery", "underscore", "backbone", "views/HeaderView", "views/FooterView", "text!templates/views/AppView.htm"], function($, _, Backbone, HeaderView, FooterView, AppViewTemplate) {
+
+    /**
+     * View-pai da aplicação.
+     *
+     * @extends {Backbone.View}
+     * @example
+     * appView = new AppView
+     * appView.render()
+     *
+     * @author gustavosotnas
+     */
     var AppView;
     return AppView = (function(superClass) {
       extend(AppView, superClass);
@@ -11,11 +22,37 @@
         return AppView.__super__.constructor.apply(this, arguments);
       }
 
+
+      /**
+       * Escopo da view.
+       * @type {String}
+       */
+
       AppView.prototype.el = 'body';
+
+
+      /**
+       * Template no formato Underscore.js Template que define o esqueleto da
+       * estrutura da página HTML.
+       *
+       * @type {_.template}
+       */
 
       AppView.prototype.template = _.template(AppViewTemplate);
 
+
+      /**
+       * Lista de views que serão renderizadas dentro da view.
+       * @type {Backbone.View[]}
+       */
+
       AppView.prototype.subViews = [HeaderView, FooterView];
+
+
+      /**
+       * Instancia e renderiza automaticamente todas as subviews de uma view.
+       * @uses this.subViews a lista de views.
+       */
 
       AppView.prototype.renderSubViews = function() {
         var _subView, i, len, ref, results, subView;
@@ -28,6 +65,15 @@
         }
         return results;
       };
+
+
+      /**
+       * Renderiza a view de acordo com um template e possíveis subviews que tiverem
+       * sido definidas na classe.
+       *
+       * @uses this.template template da view.
+       * @return {AppView} ela mesma.
+       */
 
       AppView.prototype.render = function() {
         this.$el.html(this.template);
