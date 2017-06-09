@@ -2,10 +2,13 @@ define [
   "jquery"
   "underscore"
   "backbone"
+  "jquery-css-in-hex"
+  "browser-toolbar-tinter"
   "views/HeaderView"
   "views/FooterView"
   "text!templates/views/AppView.htm"
-], ($, _, Backbone, HeaderView, FooterView, AppViewTemplate) ->
+], ($, _, Backbone, jQueryCSSinHEX, BrowserToolbarTinter, HeaderView,
+  FooterView, AppViewTemplate) ->
 
   ###*
    * View-pai da aplicação.
@@ -51,8 +54,10 @@ define [
         _subView.render()
 
     ###*
-     * Renderiza a view de acordo com um template e possíveis subviews que tiverem
-     * sido definidas na classe.
+     * Renderiza a view de acordo com o seu template e suas possíveis subviews
+     * que tiverem sido definidas na classe, além de tingir a toolbar de
+     * navegadores para dispositivos móveis (usando o "BrowserToolbarTinter")
+     * com a mesma cor usada no header do site.
      *
      * @uses this.template template da view.
      * @return {AppView} ela mesma.
@@ -60,5 +65,7 @@ define [
     render: ->
       @$el.html @template
       @renderSubViews()
+
+      BrowserToolbarTinter.tint $("header").css "background-color"
 
       @

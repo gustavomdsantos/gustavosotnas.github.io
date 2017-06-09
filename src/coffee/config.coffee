@@ -26,6 +26,8 @@ requirejs.config
       'lib/backbone-min'
     ]
     typed: 'lib/typed.min'
+    "jquery-css-in-hex": 'lib/jquery-css-in-hex'
+    "browser-toolbar-tinter": 'lib/browser-toolbar-tinter'
     styles: '../css/'
     templates: '../../src/templates/'
   shim:
@@ -39,6 +41,12 @@ requirejs.config
     typed:
       deps: ["jquery"]
       exports: "Typed"
+    "jquery-css-in-hex":
+      deps: ["jquery"]
+      exports: "jquery-css-in-hex"
+    "browser-toolbar-tinter":
+      deps: ["jquery", "underscore"]
+      exports: "Tinter"
   map:
     '*':
       'css': 'lib/require/css.min'
