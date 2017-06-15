@@ -1,0 +1,12 @@
+{
+  "files.exclude": {
+    "**/.git": true,
+    "node_modules": true,
+    ".npmignore": true,
+    ".gitignore": true,
+    ".editorconfig": true,
+    ".codoopts": true,
+    "package.json": false
+  },
+  "git.ignoreLimitWarning": true
+}
