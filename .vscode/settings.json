@@ -6,7 +6,8 @@
     ".gitignore": true,
     ".editorconfig": true,
     ".codoopts": true,
-    "package.json": false
+    "package.json": false,
+    "coffeelint.json": true
   },
   "git.ignoreLimitWarning": true
 }
