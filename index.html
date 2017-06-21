@@ -18,10 +18,14 @@
       <div id="loader"></div>
     </div>
 
-    <!-- Require JS: -->
+    <!-- RequireJS: -->
     <script src="assets/js/lib/require.js"></script>
 
-    <!-- Your configuration file (loads all libs) -->
-    <script>require(['assets/js/config.js']);</script>
+    <script>
+      // Carrega o arquivo de configuração do RequireJS
+      require(['assets/js/config']);
+      // Carrega o script principal do projeto com todas as suas libs
+      require(['assets/js/Main']);
+    </script>
   </body>
 </html>

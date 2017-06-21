@@ -54,6 +54,4 @@
     }
   });
 
-  require(["Main"]);
-
 }).call(this);

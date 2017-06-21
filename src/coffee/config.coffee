@@ -51,6 +51,3 @@ requirejs.config
     '*':
       'css': 'lib/require/css.min'
       'text': 'lib/require/text'
-
-# Carrega o script principal do projeto
-require(["Main"])
